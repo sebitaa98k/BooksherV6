@@ -1,0 +1,35 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Detalles</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-card>
+      <ion-img [src]="libro.imagen"></ion-img>
+       <ion-card-header>
+         <ion-card-title>{{ libro.titulo }}</ion-card-title>
+       <ion-card-content>
+         <p>{{ libro.autor }}</p>
+         <p>Cantidad de páginas: {{ libro.paginas }}</p>
+       </ion-card-content>
+       <ion-button (click)="AnadiraFavoritos()" style="--background: #dfaa64;" shape="round">Añadir a favoritos</ion-button>
+       <ion-button (click)="MarcarLeido()" style="--background: #dfaa64;" shape="round">Marcar Como leído</ion-button>
+      </ion-card-header>
+      <ion-card-content>
+        <mat-form-field>
+          <mat-label>Estado Libro</mat-label>
+          <mat-select [(value)]="seleccionado">
+            <mat-option value="leido">Leido</mat-option>
+            <mat-option value="porleer">Por Leer</mat-option>
+            <mat-option value="leyendo">Leyendo</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </ion-card-content>
+     </ion-card>
+  </ion-card>
+</ion-content>
