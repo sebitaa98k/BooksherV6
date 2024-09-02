@@ -49,7 +49,7 @@ export class RegistrarsePage implements OnInit {
   }
 //los boolean aca sirven para devolver el valor a si es verdadero o falso
   validarContrasena(password: string) {
-    const patron = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,20}$/;
+    const patron = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@#$!%*_?&])[A-Za-z\d@#$!%*_?&]{8,}$/;
     return patron.test(password);
   }
 
@@ -95,7 +95,11 @@ export class RegistrarsePage implements OnInit {
         email: this.email
       }
     };
-    
+    this.username = "";
+    this.email= "";
+    this.password = "";
+    this.passwordR = "";
+
     this.router.navigate(['/login'], navigationextras);
   }
 }

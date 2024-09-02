@@ -27,6 +27,19 @@ ion-content {
 h1{
     color: #6D4C41;
     text-align: center;
+    font-size: 30px;
+    line-height: 1.2;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
   
+
+p{
+  color:red;
+  font-size: smaller
+}
+
+container-p{
+  display: flex;
+  flex-direction: column; /* Coloca los párrafos en una columna */
+  align-items: flex-start;
+}

@@ -11,6 +11,8 @@ export class CadaLibroPage implements OnInit {
  seleccionado : string = "Leido";
  libro : any = { titulo: 'Harry Potter y la piedra filosofal', autor: 'J.K. Rowling',paginas: 333 ,imagen: 'assets/img/librohp1.webp'}
 
+  cantidadMensajes : number = 0;
+
   constructor(private menuController : MenuController, private ToastController:ToastController){
 
     this.menuController.enable(true, 'MenuPrincipal')
@@ -21,7 +23,7 @@ export class CadaLibroPage implements OnInit {
     const toast=await this.ToastController.create({
       message:mensaje,
       duration:2000,
-      position:'bottom',
+      position:'top',
     })
     await toast.present();
   }
@@ -34,6 +36,31 @@ export class CadaLibroPage implements OnInit {
   MarcarLeido(){
     this.generarToast('Marcado como leído')
   }
+
+  cambiarLibroLeidoNo(){
+    if(this.cantidadMensajes === 0){
+      this.generarToast('Libro asignado como leido')
+      this.cantidadMensajes = 1
+      return;
+    }
+
+    if(this.cantidadMensajes === 1){
+      this.generarToast('Libro asignado como leyendo')
+      this.cantidadMensajes = 2
+      return;
+    }
+
+    if(this.cantidadMensajes === 2){
+      this.generarToast('Libro asignado como proximos a leer')
+      this.cantidadMensajes = 0
+      return;
+      
+    }
+
+
+  }
+
+
 
   ngOnInit() {
   }

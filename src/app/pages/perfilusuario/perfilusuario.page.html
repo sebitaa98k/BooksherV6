@@ -30,14 +30,14 @@
           <p>{{Libro1.autor}}</p>
         </ion-card-content>
       </ion-card>
-      <ion-card>
+      <ion-card [routerLink]="['/cada-libro']">
         <img class="img-libros" [src]="Libro2.imagen" alt="">
         <ion-card-header>{{Libro2.titulo}}</ion-card-header>
         <ion-card-content>
           <p>{{Libro2.autor}}</p>
         </ion-card-content>
       </ion-card>
-      <ion-card>
+      <ion-card [routerLink]="['/cada-libro']">
         <img class="img-libros" [src]="Libro3.imagen" alt="">
         <ion-card-header>{{Libro3.titulo}}</ion-card-header>
         <ion-card-content>

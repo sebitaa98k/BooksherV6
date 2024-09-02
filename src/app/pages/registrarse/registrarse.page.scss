@@ -29,6 +29,11 @@ ion-content {
   
   p{
     color:red;
-    text-align:center;
     font-size: smaller
+  }
+
+  container-p{
+    display: flex;
+    flex-direction: column; /* Coloca los párrafos en una columna */
+    align-items: flex-start;
   }

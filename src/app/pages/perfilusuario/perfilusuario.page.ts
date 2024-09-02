@@ -10,7 +10,7 @@ import { MenuController } from '@ionic/angular';
 export class PerfilusuarioPage implements OnInit {
 
   usuario : string = "Usuario";
-  password : string = "1234";
+  password : string = "Usuario_91";
   email : string = "Usuario@example.cl";
 
   Libro1 : any = { titulo: 'Harry Potter y la Orden del Fénix', autor: 'J.K. Rowling', imagen: 'assets/img/librohp5.webp' }

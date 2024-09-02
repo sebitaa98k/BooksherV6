@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import {MatSelectModule} from '@angular/material/select';
-import {MatFormFieldModule} from '@angular/material/form-field';
+import { MatIconModule } from '@angular/material/icon';
+
 
 import { IonicModule } from '@ionic/angular';
 
@@ -16,8 +16,7 @@ import { CadaLibroPage } from './cada-libro.page';
     FormsModule,
     IonicModule,
     CadaLibroPageRoutingModule,
-    MatFormFieldModule,
-    MatSelectModule
+    MatIconModule
   ],
   declarations: [CadaLibroPage]
 })

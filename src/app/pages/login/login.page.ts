@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, signal } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AlertController, MenuController } from '@ionic/angular';
 
@@ -18,6 +18,8 @@ export class LoginPage implements OnInit {
 
   usuarioAdmin: string = 'ADMIN';
   passwordAdmin: string = 'admin123';
+
+  
 
   constructor(
     private router: Router,
@@ -54,6 +56,8 @@ export class LoginPage implements OnInit {
     });
     await alerta.present();
   }
+
+
 
   //Funcion para iniciar sesion, tiene condiciones para evitar que no se ingresen datos, que los datos sean incorrectos
   //o para entrar como administrador
