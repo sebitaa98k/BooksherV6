@@ -83,7 +83,7 @@ ModificarPerfil(){
     this.contraIgual = true;
   }
 
-  if(this.usuario===this.usuarioval && this.contrasena === this.contrasenaval && this.correo === this.correoval && this.contrasenaval===this.contrasenaR){
+  if(this.usuario===this.usuarioval || this.contrasena === this.contrasenaval || this.correo === this.correoval || this.contrasenaval===this.contrasenaR){
     this.contraMisma = true;
   }
 

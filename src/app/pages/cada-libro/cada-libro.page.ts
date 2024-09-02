@@ -33,9 +33,6 @@ export class CadaLibroPage implements OnInit {
     this.generarToast('Añadido con éxito');
   }
 
-  MarcarLeido(){
-    this.generarToast('Marcado como leído')
-  }
 
   cambiarLibroLeidoNo(){
     if(this.cantidadMensajes === 0){

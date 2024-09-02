@@ -14,7 +14,7 @@ export class EliminarLibrosAdminPage implements OnInit {
   async generarToast(){
     const toast=await this.ToastController.create({
       message:'El libro se ha eliminado correctamente',
-      duration:5000,
+      duration:1300,
       position:'bottom',
     })
     await toast.present();

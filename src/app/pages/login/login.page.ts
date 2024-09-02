@@ -95,12 +95,7 @@ export class LoginPage implements OnInit {
 
 
   recuperarCuenta(){
-    if(!this.usuarioV || !this.passwordV){
-      this.MostrarAlerta('Cree un usuario')
-    }else{
       this.router.navigate(['/recuperar-contra'])
-      
-    }
   }
 
   ngOnInit() {}
